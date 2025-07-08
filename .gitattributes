@@ -1,0 +1,54 @@
+# https://github.com/alexkaratarakis/gitattributes/blob/master/Web.gitattributes
+# Handle line endings automatically for files detected as text
+# and leave all files detected as binary untouched.
+*               text=auto
+
+#
+# The above will handle all files NOT found below
+#
+# Check all file types have a handler:
+#   git ls-files | git check-attr -a --stdin | grep "text: auto"
+#
+
+* text eol=lf
+
+# These files are text and should be normalized
+*.sh            text eol=lf
+*.json          text eol=lf
+*.svg           text eol=lf
+*.yml           text eol=lf
+*.yaml           text eol=lf
+
+# Windows specific
+*.ps1           text eol=crlf
+*.bat           text eol=crlf
+*.cmd           text eol=crlf
+
+# Documentation
+VERSION         text eol=lf
+*.md            text eol=lf
+*.adoc          text eol=lf
+*.html          text eol=lf
+*.txt           text eol=lf
+*.puml          text eol=lf
+
+# Docker
+Dockerfile*	    text eol=lf
+
+# These files are binary and should be left untouched
+*.ttf           binary
+*.dll           binary
+*.gif           binary
+*.ico           binary
+*.jpg           binary
+*.jpeg          binary
+*.png           binary
+*.so            binary
+*.jar           binary
+*.war           binary
+*.gz            binary
+*.tgz           binary
+*.zip           binary
+*.exe           binary
+*.jks           binary
+*.pkcs12        binary

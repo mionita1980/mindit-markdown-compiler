@@ -1,7 +1,7 @@
 FROM texlive/texlive:latest-full
 
 #install pandoc
-RUN apt update && apt install -y pandoc pandoc-plantuml-filter
+RUN apt update && apt install -y pandoc pandoc-plantuml-filter plantuml
 
 #add the templates
 RUN mkdir -p /usr/share/pandoc/data/templates/

@@ -24,6 +24,5 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Push the Docker image
       run: |
-        export CODEQL_VERSION=$(head -n 1 ./codeql.version)
         docker push mionita1980/mindit-markdown-compiler:${{steps.date.outputs.date}}
         docker push mionita1980/mindit-markdown-compiler:latest

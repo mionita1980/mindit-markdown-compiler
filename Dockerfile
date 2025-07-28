@@ -1,11 +1,11 @@
-FROM texlive/texlive:latest-full
+FROM pandoc/extra:latest-ubuntu
 
-#install pandoc
-RUN apt update && apt install -y pandoc pandoc-plantuml-filter plantuml
+#install plantuml filter
+RUN apt update && apt install -y pandoc-plantuml-filter
 
-#add the templates
-RUN mkdir -p /usr/share/pandoc/data/templates/
-COPY templates /usr/share/pandoc/data/templates/
+#install plantuml
+RUN wget https://github.com/plantuml/plantuml/releases/download/v1.2025.4/plantuml-1.2025.4.jar
+RUN rm -rf /usr/share/plantuml/plantuml.jar && mv plantuml-1.2025.4.jar /usr/share/plantuml/plantuml.jar
 
 #add the background
 COPY mindit.pdf /

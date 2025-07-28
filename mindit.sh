@@ -4,4 +4,4 @@ INPUT_NAME=${INPUT%.*}
 OUTPUT="${INPUT_NAME}.pdf"
 echo "Input file: $INPUT"
 echo "Output file: $OUTPUT"
-pandoc /documents/${INPUT} --filter pandoc-plantuml --template eisvogel -o /documents/${OUTPUT}
+pandoc /documents/${INPUT} --filter pandoc-plantuml --number-sections --shift-heading-level-by=-1 --template eisvogel -o /documents/${OUTPUT}

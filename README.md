@@ -1,4 +1,6 @@
-# Building Image
+#mindit Markdown Compiler
+
+## Building Image
 
 Build the image (where `XX.YY.ZZ` is the version, usually the current date, e.g. `24.04.06` means April 6, 2024)
 
@@ -8,15 +10,19 @@ docker build --tag "mionita1980/mindit-markdown-compiler:latest" --tag "mionita1
 
 Upload the image to the [Docker](http://hub.docker.com) repo.
 
-
 ## Usage
 
-Make sure to use the latest version (replace `latest` with a specific version, if desired)
+Use from Linux or WSL command prompt (you must run this command from the folder where your markdown file is located):
 
 ```bash
 docker run --rm -v $(pwd):/documents/ mionita1980/mindit-markdown-compiler:latest index.md
 ```
 
+Use from powershell Windows command prompt (you must run this command from the folder where your markdown file is located):
+
+```powershell
+docker run --rm -v .:/documents/ mionita1980/mindit-markdown-compiler:latest index.md
+```
 
 ## Sample Markdown File
 
@@ -63,7 +69,9 @@ Currently the document contains:
 ```
 
 
-## Known Errors
+## Known (Solved) Issues
 
 With the plantuml version that ubuntu provides (apt install), you get errors like `Fatal parsing error $elementSkin` while creating images from C4 plantuml diagrams.  
 See https://github.com/plantuml-stdlib/C4-PlantUML/issues/198.
+
+Fixed by using the latest plantuml `.jar` file, which gets downloaded during the build (see `./Dockerfile`).

@@ -9,6 +9,7 @@ RUN rm -rf /usr/share/plantuml/plantuml.jar && mv plantuml-1.2025.9.jar /usr/sha
 
 #add the background
 COPY mindit.pdf /
+COPY mindit-title.pdf /
 
 #create documents folder
 RUN mkdir -p /documents

@@ -34,6 +34,11 @@ date: "July 8th, 2025"
 subject: "Technical Solution Description"
 keywords: [Test, Document, Mihai]
 lang: "en"
+titlepage: true
+titlepage-text-color: "000000"
+titlepage-rule-color: "360049"
+titlepage-rule-height: 0
+titlepage-background: "mindit-title.pdf"
 watermark: ""
 header-left: "\\hspace{1cm}"
 header-center: "\\thetitle"

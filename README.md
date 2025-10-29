@@ -76,7 +76,22 @@ Currently the document contains:
 
 ## Known (Solved) Issues
 
+### Plantuml Version
+
 With the plantuml version that ubuntu provides (apt install), you get errors like `Fatal parsing error $elementSkin` while creating images from C4 plantuml diagrams.  
 See https://github.com/plantuml-stdlib/C4-PlantUML/issues/198.
 
 Fixed by using the latest plantuml `.jar` file, which gets downloaded during the build (see `./Dockerfile`).
+
+### Latex Error Counter None
+
+```
+Error producing PDF.
+! LaTeX Error: No counter 'none' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...
+
+l.830 \begin{longtable}[]{@{}llll@{}}
+```

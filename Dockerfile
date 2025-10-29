@@ -1,4 +1,4 @@
-FROM pandoc/extra:3.8-ubuntu
+FROM pandoc/extra:3.7.0.2-ubuntu
 
 #install plantuml filter
 RUN apt update && apt install -y pandoc-plantuml-filter
@@ -9,7 +9,7 @@ RUN rm -rf /usr/share/plantuml/plantuml.jar && mv plantuml-1.2025.4.jar /usr/sha
 
 #add the background
 COPY mindit.pdf /
-COPY mindit-title.pdf /
+COPY title.pdf /
 
 #create documents folder
 RUN mkdir -p /documents

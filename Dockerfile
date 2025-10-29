@@ -4,8 +4,8 @@ FROM pandoc/extra:3.8-ubuntu
 RUN apt update && apt install -y pandoc-plantuml-filter
 
 #install plantuml
-RUN wget https://github.com/plantuml/plantuml/releases/download/v1.2025.9/plantuml-1.2025.9.jar
-RUN rm -rf /usr/share/plantuml/plantuml.jar && mv plantuml-1.2025.9.jar /usr/share/plantuml/plantuml.jar
+RUN wget https://github.com/plantuml/plantuml/releases/download/v1.2025.4/plantuml-1.2025.4.jar
+RUN rm -rf /usr/share/plantuml/plantuml.jar && mv plantuml-1.2025.4.jar /usr/share/plantuml/plantuml.jar
 
 #add the background
 COPY mindit.pdf /

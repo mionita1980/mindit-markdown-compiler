@@ -36,6 +36,7 @@ VERSION         text eol=lf
 Dockerfile*	    text eol=lf
 
 # These files are binary and should be left untouched
+*.pdf           binary
 *.ttf           binary
 *.dll           binary
 *.gif           binary

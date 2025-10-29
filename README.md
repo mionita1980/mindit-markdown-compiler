@@ -1,4 +1,4 @@
-#mindit Markdown Compiler
+# mindit Markdown Compiler
 
 ## Building Image
 

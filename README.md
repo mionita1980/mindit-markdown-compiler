@@ -95,3 +95,13 @@ Type  H <return>  for immediate help.
 
 l.830 \begin{longtable}[]{@{}llll@{}}
 ```
+
+### Error producing PDF. ! LaTeX Error: Unicode character ├ (U+251C) not set up for use with LaTeX.
+
+Search for UTF non-standard chars:
+
+```bash
+LC_ALL=C  grep --color='auto' -P -n "[\x80-\xFF]" file.txt
+```
+
+and remove them.

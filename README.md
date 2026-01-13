@@ -105,3 +105,19 @@ LC_ALL=C  grep --color='auto' -P -n "[\x80-\xFF]" file.txt
 ```
 
 and remove them.
+
+### [WARNING] Could not fetch resource plantuml-images/b00ca4e2bd21412fc76aed46f783708d49feda06.png: replacing image with description
+
+Remove the name from lines beginning with `@startuml`.
+
+For example, change:
+
+```
+@startuml Evaluator Results Query Flow
+```
+
+into
+
+```
+@startuml
+```

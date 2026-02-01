@@ -30,7 +30,7 @@ docker run --rm -v .:/documents/ mionita1980/mindit-markdown-compiler:latest ind
 ---
 title: "My Test"
 author: [Mihai]
-date: "July 8th, 2025"
+date: "January 8th, 2026"
 subject: "Technical Solution Description"
 keywords: [Test, Document, Mihai]
 lang: "en"
@@ -38,17 +38,17 @@ titlepage: true
 titlepage-text-color: "000000"
 titlepage-rule-color: "360049"
 titlepage-rule-height: 0
-titlepage-background: "mindit-title.pdf"
+titlepage-background: "/mindit-title.pdf"
 watermark: ""
 header-left: "\\hspace{1cm}"
 header-center: "\\thetitle"
 footer-left: "\\thepage"
 footer-center: "mindit.io"
-footer-right: "(c) 2025"
-page-background: "mindit.pdf"
+footer-right: "(c) 2026"
+page-background: "/mindit.pdf"
 papersize: a4
 numbersections: true
-geometry: "left=1.5cm,right=1.5cm,top=2.5cm,bottom=2.5cm"
+geometry: "left=1.5cm,right=1.5cm,top=3cm,bottom=3cm"
 header-includes:
   - \usepackage{enumitem}
   - \setlistdepth{20}

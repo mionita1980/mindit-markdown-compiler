@@ -121,3 +121,23 @@ into
 ```
 @startuml
 ```
+
+### Error regarding `/opt/local/bin/dot`
+
+You must install graphviz: `apt install graphviz`.
+
+### Error Could not create directory "plantuml-images"
+
+Inside the plantuml diagram inside the markdown file, the start line must be empty:
+
+- this is not ok
+
+```
+@startuml SkillsMatrixActivity
+```
+
+- this is ok
+
+```
+@startuml
+```

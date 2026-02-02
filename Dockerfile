@@ -1,8 +1,8 @@
 FROM pandoc/extra:3.8-debian
 
-#install plantuml filter
+#install graphviz and plantuml filter
 RUN apt update && \
-    apt install -y --no-install-recommends pandoc-plantuml-filter && \
+    apt install -y --no-install-recommends graphviz pandoc-plantuml-filter && \
     apt autoremove -y && \
     rm -rf /config/.cache /var/lib/apt/lists/* /var/tmp/* /tmp/*
 
